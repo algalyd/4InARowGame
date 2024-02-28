@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcomeMessage {
+    margin-bottom: 20px; /* Distance between the message and the button */
+    font-size: 2em; /* Adjust size as needed */
+    color: white; /* Adjust color as needed */
+    text-align: center;
+    width: 100%; /* Ensure it spans the width of the screen */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.startGameButton {
+    width: 10em; /* Width of the button */
+    height: 5em; /* Height of the button */
+    font-size: 2em;
+    padding: 1em 1em;
+    cursor: pointer; /* To show a pointer cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Optional: to give rounded corners */
+    background-color: blue; /* Example background color */
+    color: black; /* Text color */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.startGameButton:hover {
+    background-color: green; /* Darker shade for hover effect */
 }
 
-.App-link {
-  color: #61dafb;
+.menuButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100; /* Ensure it's above other content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu {
+    position: absolute;
+    top: 60px; /* Adjust based on the menu button's size */
+    right: 20px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
+
+.menu button {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.continueButton {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px; /* Adjust as needed to space it from the color options */
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.continueButton:hover:enabled {
+    background-color: green;
+}
+
+.continueButton:disabled {
+    background-color: green;
+    cursor: not-allowed;
+}
+
+.gameModeButton {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.gameModeButton:hover {
+    background-color: #0056b3;
+}
+
+.gameBoard {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.gameRow {
+    display: flex;
+}
+
+.gameCell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: grey; /* Default, should not actually be visible */
+}
+
+.player1 {
+    background-color: yellow; /* Use player1Color from state */
+}
+
+.player2 {
+    background-color: red; /* Use player2Color from state */
+}
+
+
+.container {
+    max-width: 400px; /* Remove quotes for numerical values */
+    margin: 20px auto;
+}
+
+.inputPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Remove quotes */
+    padding: 10px; /* Remove quotes */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Remove quotes */
+}
+
+
+
+.input {
+    flex: 1; /* Remove quotes and correct the value */
+    margin-right: 20px; /* Remove quotes */
+    width: 100px;
+}
+
+
+
+/* Assuming .continueButton class already exists with its own styles */
+
+/* Assuming .continueButton class already exists with its own styles */
+
+.headerTitle {
+    color: white; /* Makes the text color white */
+    white-space: nowrap;
+    margin-bottom: 20px; /* Distance between the message and the button */
+    text-align: center;
+    width: 100%; /* Ensure it spans the width of the screen */
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.newGameButton {
+    background-color: #4CAF50;
+}
+
+.mainMenuButton {
+    background-color: #008CBA;
+}
+
+
+
+
+
